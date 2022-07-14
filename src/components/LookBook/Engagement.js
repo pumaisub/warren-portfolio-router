@@ -1,10 +1,10 @@
-import { LookbookSrc } from './LookbookSrc' 
+import { EngagementSrc } from './EngagementSrc' 
 import Gallery from "react-photo-gallery"
 import React, { useState, useCallback } from "react"
 import Carousel, { Modal, ModalGateway } from "react-images"
 import './LookBook.css'
 
-function LookBook() {
+function Engagement() {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
@@ -21,13 +21,13 @@ function LookBook() {
         <>
             <div className='lookbook-container'>
                 <h1 className='lookbook-title'></h1>
-                <Gallery photos={LookbookSrc} onClick={openLightbox} />
+                <Gallery photos={EngagementSrc} onClick={openLightbox} />
                 <ModalGateway>
                     {viewerIsOpen ? (
                     <Modal onClose={closeLightbox}>
                         <Carousel
                         currentIndex={currentImage}
-                        views={LookbookSrc.map(x => ({
+                        views={EngagementSrc.map(x => ({
                             ...x,
                             srcset: x.srcSet,
                             caption: x.title
@@ -41,4 +41,4 @@ function LookBook() {
     )
 }
 
-export default LookBook
+export default Engagement

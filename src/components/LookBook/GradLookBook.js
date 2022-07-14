@@ -20,7 +20,7 @@ function GradLookBook() {
     return (
         <>
             <div className='lookbook-container'>
-                <h1 className='lookbook-title'>Grad Photos</h1>
+                <h1 className='lookbook-title'></h1>
                 <Gallery photos={GradLookBookSrc} onClick={openLightbox} />
                 <ModalGateway>
                     {viewerIsOpen ? (

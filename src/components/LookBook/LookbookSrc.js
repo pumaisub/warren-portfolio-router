@@ -5,9 +5,30 @@ export const LookbookSrc = [
       height: 5419
     },
     {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Engagement/vert1.jpg'),
+      width: 3613,
+      height: 5419
+    },
+    {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert1.jpg'),
+      width: 3613,
+      height: 5419
+    },
+    {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Grad/GradVert1.jpg'),
+      width: 3613,
+      height: 5419
+    },
+    {
       src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/horiz1.jpg'),
       width: 6,
       height: 4
+    },
+
+    {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Engagement/vert2.jpg'),
+      width: 3613,
+      height: 5419
     },
     {
       src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/vert2.jpg'),
@@ -19,6 +40,44 @@ export const LookbookSrc = [
       width: 6,
       height: 4
     },
+
+    {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Engagement/vert3.jpg'),
+      width: 3613,
+      height: 5419
+    },
+    {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Engagement/vert4.jpg'),
+        width: 3613,
+        height: 5419
+      },
+
+      {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert2.jpg'),
+        width: 3613,
+        height: 5419
+      },
+      {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert3.jpg'),
+        width: 3613,
+        height: 5419
+      },
+      {
+          src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert4.jpg'),
+          width: 3613,
+          height: 5419
+      },
+
+      {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Grad/GradVert2.jpg'),
+        width: 3613,
+        height: 5419
+      },
+      {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Grad/GradVert3.jpg'),
+        width: 3613,
+        height: 5419
+      },
     {
       src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/vert4.jpg'),
       width: 3613,
@@ -39,6 +98,26 @@ export const LookbookSrc = [
       width: 3613,
       height: 5419
     },
+    {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert5.jpg'),
+      width: 3613,
+      height: 5419
+  },
+  {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert6.jpg'),
+      width: 3613,
+      height: 5419
+  },
+  {
+      src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/vert7.jpg'),
+      width: 3613,
+      height: 5419
+  },
+  {
+        src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/Fashion/hellastudious1.jpg'),
+        width: 3613,
+        height: 5419
+  },
     {
       src: require('/Users/pumaisub/VisualStudioFiles/warren-portfolio-router/src/Photos/vert7.jpg'),
       width: 3613,

@@ -16,12 +16,16 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Warren Delos Santos Photography</h1>
+                <Link to={''} style={{ textDecoration: 'none' }} >
+                    <h1 className="navbar-logo">WARREN DE LOS SANTOS</h1>
+                    
+                </Link>
+                
 
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (
-                            <Link to={item.route}>
+                            <Link to={item.route} style={{ textDecoration: 'none' }}>
                                 <li key={index}>
                                     <a className={item.cName} href={item.url}>
                                     {item.title}    
