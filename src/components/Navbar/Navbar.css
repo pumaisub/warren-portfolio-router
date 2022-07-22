@@ -11,16 +11,35 @@
     justify-content: center;
     align-items:center;
     font-size: 1rem;
-    position: fixed;
+    /* i charnged position fixed to relative*/
+    position: relative;
     top: 0;
     width: 100%;
     font-family: 'Raleway', sans-serif;
 }
 
+/* this code below is from the link provided below
+https://blog.logrocket.com/create-responsive-navbar-react-css/
+... i was just putting it here as reference 
+.navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+*/
+
 .navbar-logo{
     color: rgb(15, 13, 13);
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 80px;
+    /*transform: translate(-30%, 30%);*/
+    margin-top:40px;
     cursor: pointer;
     font-size: 1.8rem;
     font-family: 'Raleway', sans-serif;
@@ -32,7 +51,7 @@
 }*/
 
 .nav-menu {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(7, auto);
     grid-gap: 20px;
     list-style: none;
@@ -41,7 +60,25 @@
     justify-content: end;
     margin-right: 2rem;
     text-decoration: none;
+    /* im adding margin-left:auto below*/
+    margin-left: auto;
 }
+
+/*
+the code below is also from log rocket link tutorial for responsive navbar
+... brand name is just the logo name ... which in 
+our case is the className = "navbar-logo" 
+
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+*/
 
 .nav-links{
     color:rgb(3, 3, 3);
@@ -77,20 +114,80 @@
     display: none;
 }
 
-@media screen and (max-width: 960px) {
+/*
+code below is copied from log rocket tutorial
+.navigation-menu ul {
+    display: flex;
+    padding: 0;
+}
+.navigation-menu li {
+    // removes default disc bullet for li tags and applies margin to left & right side
+    list-style-type: none;
+    margin: 0 1rem;
+}
+.navigation-menu li a {
+     // increases the surface area of the anchor tag to span more than just the anchor text
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+*/
+.nav-menu ul {
+    display: flex;
+    padding: 0;
+}
+.nav-menu li {
+    /*removes default disc bullet for li tags and applies margin to left & right side*/
+    list-style-type: none;
+    margin: 0 1rem;
+}
+.nav-menu li a {
+     /*increases the surface area of the anchor tag to span more than just the anchor text*/
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.hamburger {
+    /*removes default border on button element*/
+    border: 0;
+    height: 60px;
+    width: 60px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #2e2e2e;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  /*positions the icon to the right and center aligns it vertically*/
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+}
+.hamburger:hover {
+    background-color: #2d2d2d;
+}   
+
+
+
+
+
+@media screen and (max-width: 960px) and (min-width: 769px){
     .NavbarItems{
-        position: relative;
+        position: static;
         text-decoration: none;
+        
     }
 
     .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 500px;
+        display: inline-block;
+        grid-template-columns: repeat(7,auto);
+        flex-direction: row;
+        width: 100vw;
         position: absolute;
-        top: 80px;
-        left: -100%;
+        top: 45px;
+        /*left: -100%;*/
         opacity: 1;
         transition: all 0.5s ease;
         text-decoration: none;
@@ -105,26 +202,32 @@
         text-decoration: none;
     }
 
+
     .nav-links {
         text-align: center;
-        padding: 2rem;
+    
         width: 100%;
-        display: table;
+        
         text-decoration: none;
     }
 
     .nav-links:hover{
-        background-color: #7577fa;
+        background-color: #2d2d2d;
         border-radius: 0;
         text-decoration: none;
-
     }
 
     .navbar-logo {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(25%, 50%);
+        transform: translate(-30%, 40%);
+        font: 16px;
+        margin-top:0px;
+        overflow-wrap: break-word;
+        white-space: normal;
+        max-width: 200px;
+        font-size: 1.6rem;
     }
 
     .menu-icon{
@@ -166,3 +269,54 @@
         display:none;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .nav-menu ul {
+    /*navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)*/
+    position: absolute;
+    top: 140px;
+    left: 0;
+    /* stacks the li tags vertically */
+    flex-direction: column;
+   /* makes menu span full height and width */
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .nav-menu li {
+    /* centers link text and strips off margin */
+    text-align: center;
+    margin: 0;
+  }
+  .nav-menu li a {
+    color: black;
+    /* increases the surface area of the anchor tag to span the full width of the menu */
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .nav-menu li:hover {
+    background-color: #eee;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu ul {
+      display: none;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    .nav-menu.expanded ul {
+      display: block;
+    }
+  }
